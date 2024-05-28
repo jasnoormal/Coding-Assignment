@@ -1,1 +1,36 @@
+//3.Create a p5.js sketch
+function setup() {
+  createCanvas(400, 400);  
+}
 
+function draw() {
+  
+}
+
+// a.) When the user presses the 'A' key, it will draw a triangle with vertices at (100, 100), (150, 50), and (200, 100) in Purple color.
+function keyPressed() {
+  if (keyCode === 65) { 
+    fill('purple')
+    triangle(100, 100, 150, 50, 200, 100);
+  }
+  
+// b.) When the user presses the 'B' key, it will draw a triangle with vertices at (250, 250), (300, 200), and (350, 250) in Orange color.
+  if (keyCode === 66) { 
+    fill('orange')
+    triangle(250, 250, 300, 200, 350, 250);
+  }
+}
+
+// c.) When the user clicks the mouse, it will draw a triangle centered at the mouse position with vertices forming an equilateral triangle of side length 100.
+function mousePressed() {
+  const sideLength = 100;
+  const height = (Math.sqrt(3) / 2) * sideLength;
+  const halfSide = sideLength / 2;
+  fill('black');
+  noStroke();
+  triangle(
+    mouseX - halfSide, mouseY + height / 3,
+    mouseX + halfSide, mouseY + height / 3,
+    mouseX, mouseY - 2 * height / 3
+  );
+}
