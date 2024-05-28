@@ -1,0 +1,29 @@
+// 1.Create a p5.js sketch
+  function setup() {
+    createCanvas(400, 400); 
+  }
+
+  function draw() {
+  
+  }
+
+  function keyPressed() {
+  // a.) When the user presses the left arrow, it will draw a circle at (100, 100) with a diameter of 50 in Blue color.
+    if (keyCode === LEFT_ARROW) {
+      drawCircle(100, 100, 50, 'blue'); 
+      
+// b.) When the user presses the right arrow, it will draw a circle at (200, 200) with a diameter of 50 in Green color.
+    } else if (keyCode === RIGHT_ARROW) { 
+      drawCircle(200, 200, 50, 'green');
+      
+// c.) When the user presses the spacebar, it will draw a circle at the mouse position with a diameter of 75.
+    } else if (keyCode === 32) { //draws an arrow if the user presses the space bar
+      drawCircle(mouseX, mouseY, 75, 'black');
+    }
+  }
+
+  function drawCircle(x, y, diameter, color) {
+    fill(color);
+    noStroke();
+    ellipse(x, y, diameter, diameter);
+  }
