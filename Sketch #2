@@ -1,0 +1,29 @@
+// 2.Create a p5.js sketch
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+
+}
+
+// a.) When the user presses any key, it will draw an ellipse at the center of the canvas with a width of 150 and height of 100 in Yellow color.
+function keyPressed() {
+  drawEllipse(width / 2, height / 2, 150, 100, 'yellow');
+}
+
+// b.) When the user releases any key, it will draw an ellipse at the mouse position with a width of 50 and height of 75.
+function keyReleased() {
+  drawEllipse(mouseX, mouseY, 50, 75, 'yellow');
+}
+
+// c.) When the user double-clicks the mouse, it will clear the canvas.
+function doubleClicked() {
+  clear();
+}
+
+function drawEllipse(x, y, w, h, color) {
+  fill(color);
+  noStroke();
+  ellipse(x, y, w, h);
+}
