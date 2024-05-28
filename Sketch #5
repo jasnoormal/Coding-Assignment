@@ -1,0 +1,24 @@
+// 5.Create a p5.js sketch
+function setup() {
+  createCanvas(400, 400);  
+  noLoop();  
+}
+
+function draw() {
+  
+}
+
+// a.) The user should be able to draw multiple small rectangles of width 20 and height 20 by clicking the mouse.
+function mousePressed() {
+  const rectWidth = 20;
+  const rectHeight = 20;
+
+// b.) Use a for loop to draw 10 rectangles horizontally starting from the position where the mouse is clicked.
+  for (let i = 0; i < 10; i++) {
+    
+// c.) Each rectangle should be in a different color.
+    fill(random(255), random(255), random(255));  
+    noStroke(); 
+    rect(mouseX + i * rectWidth, mouseY, rectWidth, rectHeight); 
+  }
+}
